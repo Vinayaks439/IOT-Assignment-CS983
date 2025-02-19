@@ -22,23 +22,24 @@ void groupDetails() {
   grouplcd.setCursor(0,2);
   grouplcd.print("Vinayak S,Abhinav R");
   grouplcd.setCursor(0,3);
-  grouplcd.println("Amber S");
+  grouplcd.println("Amber S, Amit C");
 }
 
 void distancemeasure() {
+  digitalWrite(disLED,LOW);
   digitalWrite(PIN_TRIG, HIGH);
   delayMicroseconds(10);
   digitalWrite(PIN_TRIG, LOW);
   int discm = 0;
   // Read the result:
   int duration = pulseIn(PIN_ECHO, HIGH);
-  discm = duration / 58;
+  discm = 0.0344/2 * duration;
   lcd.setCursor(0,3);
   lcd.print("Distance in CM: ");
   lcd.print(discm);
   Serial.print("Distance in CM: ");
   Serial.println(discm);
-  if (discm > 100) {
+  if (discm > 250) {
     digitalWrite(disLED,HIGH);
   } else {
     digitalWrite(disLED,LOW);
