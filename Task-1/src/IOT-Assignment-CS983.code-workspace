@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../IOT-Assignment-CS983"
+		},
+		{
+			"name": "CS983-IOT-Assignment",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"ios": "cpp"
+		}
+	}
+}
